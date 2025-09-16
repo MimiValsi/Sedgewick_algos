@@ -2,7 +2,6 @@ const std = @import("std");
 const printd = std.debug.print;
 const mem = std.mem;
 const strToInt = std.fmt.parseInt;
-const isDigit = std.ascii.isDigit;
 
 const N = 10000;
 
