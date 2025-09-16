@@ -22,6 +22,9 @@ pub fn main() !void {
     // input: <nb> <nb>
     while (in.peekDelimiterExclusive('\n')) |buf| {
         defer in.tossBuffered();
+
+        if (buf.len <= 2) continue;
+
         p = strToInt(usize, buf[0..1], 10) catch {
             printd("Not a digit!\n", .{});
             printd("usage: <number> <number>\n", .{});
